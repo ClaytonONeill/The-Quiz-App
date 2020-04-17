@@ -48,6 +48,44 @@ class Main extends React.Component {
     }).catch(err => console.log(err))
   }
 
+  handleUpdate = (updateData) => {
+    fetch(`${baseUrl}${updateData.id}`, {
+      body: JSON.stringify(updateData),
+      method: 'PUT',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(updatedPost => {
+        // switch back to the home view after editing a post
+        this.props.handleView('home')
+        // for simplicity's sake, we'll just make an extra AJAX call to automatically load the post this time!
+        // if you're up for a challenge though, try and see if you can figure out how to do it without an extra call
+        this.fetchPosts()
+      })
+      .catch(err => console.log(err))
+  }
+
+  handleDelete = (id) => {
+    fetch(`${baseUrl}/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    })
+        .then(json => {
+         this.fetchPosts()
+       })
+      //   this.setState(prevState => {
+      //   const posts = prevState.posts.filter(post => post.id !== id)
+      //   return { posts }
+      // })
+      // })
+      .catch(err => console.log(err))
+  }
+
   componentDidMount() {
     this.fetchPosts()
   }
@@ -65,9 +103,11 @@ class Main extends React.Component {
             key={postData.id}
             postData={postData}
             handleView={this.props.handleView}
+            handleDelete={this.handleDelete}
           /> ))
           : <Form
               handleCreate={this.handleCreate}
+              handleUpdate={this.handleUpdate}
               fromInputs={this.props.formInputs}
               view={this.props.view}
             />
