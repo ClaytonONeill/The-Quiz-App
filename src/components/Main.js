@@ -2,6 +2,7 @@
 import React from 'react'
 import Form from './Form.js'
 import Post from './Post.js'
+import Home from './Home.js'
 
 let baseUrl = '';
 if (process.env.NODE_ENV === 'development') {
@@ -35,16 +36,16 @@ class Main extends React.Component {
     return (
       <main>
       <h1>{this.props.view.pageTitle}</h1>
-        {console.log(this.props.view.page)}
-        {this.props.view.page === 'viewQuizzes' ?
-          this.state.posts.map((postData) => (
+        {
+          this.props.view.page === 'home' ?
+          <Home />
+          : this.props.view.page ==='viewQuizzes' ? this.state.posts.map((postData) => (
           <Post
             key={postData.id}
             postData={postData}
             handleView={this.props.handleView}
-          />
-        ))
-        : <Form />
+          /> ))
+          : <Form />
       }
       </main>
     )

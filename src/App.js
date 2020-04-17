@@ -12,7 +12,7 @@ class App extends React.Component {
     this.state = {
       view: {
         page: 'home',
-        pageTitle: 'Quizzes'
+        pageTitle: 'About this site.'
       }
     }
   }
@@ -21,10 +21,10 @@ class App extends React.Component {
     let pageTitle = '';
     switch (view) {
       case 'home':
-        pageTitle = 'Quizzes'
+        pageTitle = 'About this site.'
         break
       case 'viewQuizzes':
-          pageTitle = 'View Quizzes'
+          pageTitle = 'View Quizzes.'
           break
       case 'makeQuiz':
         pageTitle = 'Create A New Quiz!'
