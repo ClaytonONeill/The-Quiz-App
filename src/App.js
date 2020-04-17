@@ -19,26 +19,25 @@ class App extends React.Component {
 
   handleView = (view, postData) => {
     let pageTitle = '';
-
-  switch (view) {
-    case 'home':
-      // pageTitle: 'Quizzes'
-      break
-    case 'viewQuizzes':
-        // pageTitle: 'View Quizzes'
+    switch (view) {
+      case 'home':
+        pageTitle = 'Quizzes'
         break
-    case 'makeQuiz':
-      // pageTitle: 'Create A New Quiz!'
-      break
-      default:
-      break
-  }
-  this.setState({
-    view: {
-      page: view,
-      pageTitle: pageTitle
+      case 'viewQuizzes':
+          pageTitle = 'View Quizzes'
+          break
+      case 'makeQuiz':
+        pageTitle = 'Create A New Quiz!'
+        break
+        default:
+        break
     }
-  })
+    this.setState({
+      view: {
+        page: view,
+        pageTitle: pageTitle
+      }
+    })
 }
 
   render() {
@@ -48,7 +47,7 @@ class App extends React.Component {
       <div className="inner-container">
       <Nav handleView={this.handleView}/>
       <Main
-        view={this.state.view.pageTitle}
+        view={this.state.view}
         handleView={this.handleView}
       />
       </div>
