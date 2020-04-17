@@ -49,6 +49,7 @@ class App extends React.Component {
       <Main
         view={this.state.view}
         handleView={this.handleView}
+        formInputs={this.state.formInputs}
       />
       </div>
       </div>

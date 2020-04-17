@@ -28,7 +28,24 @@ class Main extends React.Component {
   }
 
   handleCreate = (createData) => {
-    console.log(createData);
+    fetch(`${baseUrl}`, {
+      body: JSON.stringify(createData),
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    }).then(createdPost => {
+      return createdPost.json()
+    }).then(jsonedPost => {
+      this.props.handleView('home')
+      this.setState(prevState => {
+        prevState.posts = jsonedPost
+        return {
+          posts: prevState.posts
+        }
+      })
+    }).catch(err => console.log(err))
   }
 
   componentDidMount() {
@@ -51,6 +68,8 @@ class Main extends React.Component {
           /> ))
           : <Form
               handleCreate={this.handleCreate}
+              fromInputs={this.props.formInputs}
+              view={this.props.view}
             />
       }
       </main>
