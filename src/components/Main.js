@@ -35,14 +35,13 @@ class Main extends React.Component {
     return (
       <main>
       <h1>{this.props.view}</h1>
-        {this.state.posts.map((postData) => {
+        {this.state.posts.map((postData) => (
           <Post
             key={postData.id}
             postData={postData}
           />
 
-        })}
-        <h2>Testing</h2>
+        ))}
       </main>
     )
   }
