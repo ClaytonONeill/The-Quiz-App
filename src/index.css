@@ -43,13 +43,33 @@ nav li {
   color: var(--light-green);
   padding: 2px;
   text-align: center;
+  transition: .2s ease-in-out;
 }
+
+nav li:hover  {
+  color: white;
+  cursor: pointer;
+}
+
 main {
   font-family: var(--general-font);
   background-color: var(--purple);
   color: var(--grey);
   width: 100%;
   border-right: solid 4px var(--dark-green);
+  padding: 1em;
+}
+
+/* ===== POSTS ====== */
+
+.postContain h2 {
+  text-decoration: underline;
+  transition: .2s ease-in-out;
+}
+
+.postContain h2:hover {
+  color: var(--dark-green);
+  cursor: pointer;
 }
 .forms {
   border: solid 2px var(--light-green);
