@@ -1,5 +1,0 @@
-Contributors:
-
-- Max Meacham
-
--test
