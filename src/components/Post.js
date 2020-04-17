@@ -4,12 +4,9 @@ class Post extends React.Component {
   render() {
     return (
       <div>
-        <h1>{this.props.postData.category}</h1>
+        <h2>{this.props.postData.quiztitle}</h2>
       </div>
     )
   }
-
-
 }
-
 export default Post;
