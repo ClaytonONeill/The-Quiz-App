@@ -43,7 +43,10 @@ class Main extends React.Component {
             handleView={this.props.handleView}
           />
         ))
-        : <Form />
+        : <Form
+          view={this.props.view}
+          formInputs={this.props.formInputs}
+          />
       }
       </main>
     )
