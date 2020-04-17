@@ -40,7 +40,9 @@ class Main extends React.Component {
             key={postData.id}
             postData={postData}
           />
+
         })}
+        <h2>Testing</h2>
       </main>
     )
   }

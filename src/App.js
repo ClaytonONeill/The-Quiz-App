@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Main from './components/Main.js';
 import Nav from './components/Nav.js'
+import Header from './components/Header.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -27,11 +28,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="main">
+      <div className="outter-container">
+        <Header />
+      <div className="inner-container">
       <Nav />
       <Main
         view={this.state.view.pageTitle}
       />
+      </div>
       </div>
     )
   }
