@@ -27,9 +27,29 @@ class Main extends React.Component {
     }).catch(err=>console.log(err))
   }
 
+  handleCreate = (createData) => {
+    fetch(`${baseUrl}`, {
+      body: JSON.stringify(createData),
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    }).then(createdPost => {
+      return createdPost.json()
+    }).then(jsonedPost => {
+      this.props.handleView('home')
+      this.setState(prevState => {
+        prevState.posts = jsonedPost
+        return {
+          posts: prevState.posts
+        }
+      })
+    }).catch(err => console.log(err))
+  }
 
   handleUpdate = (updateData) => {
-    fetch(`${baseUrl}/${updateData.id}`, {
+    fetch(`${baseUrl}${updateData.id}`, {
       body: JSON.stringify(updateData),
       method: 'PUT',
       headers: {
@@ -55,12 +75,14 @@ class Main extends React.Component {
         'Content-Type': 'application/json'
       }
     })
-      .then(json => {
-        this.setState(prevState => {
-        const posts = prevState.posts.filter(post => post.id !== id)
-        return { posts }
-      })
-      })
+        .then(json => {
+         this.fetchPosts()
+       })
+      //   this.setState(prevState => {
+      //   const posts = prevState.posts.filter(post => post.id !== id)
+      //   return { posts }
+      // })
+      // })
       .catch(err => console.log(err))
   }
 
@@ -81,12 +103,14 @@ class Main extends React.Component {
             key={postData.id}
             postData={postData}
             handleView={this.props.handleView}
+            handleDelete={this.handleDelete}
           /> ))
           : <Form
-          handleCreate={this.handleCreate}
-          handleUpdate={this.handleUpdate}
-          formInputs={this.props.formInputs}
-          view={this.props.view} />
+              handleCreate={this.handleCreate}
+              handleUpdate={this.handleUpdate}
+              fromInputs={this.props.formInputs}
+              view={this.props.view}
+            />
       }
       </main>
     )

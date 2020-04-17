@@ -44,6 +44,31 @@ class App extends React.Component {
 
   handleView = (view, postData) => {
     let pageTitle = '';
+    let formInputs = {
+      title: '',
+      category: '',
+      question1: '',
+      answer1: '',
+      wronganswer1a: '',
+      wronganswer1b: '',
+      question2: '',
+      answer2: '',
+      wronganswer2a: '',
+      wronganswer2b: '',
+      question3: '',
+      answer3: '',
+      wronganswer3a: '',
+      wronganswer3b: '',
+      question4: '',
+      answer4: '',
+      wronganswer4a: '',
+      wronganswer4b: '',
+      question5: '',
+      answer5: '',
+      wronganswer5a: '',
+      wronganswer5b: '',
+      id: null
+    }
     switch (view) {
       case 'home':
         pageTitle = 'About this site.'
@@ -54,10 +79,8 @@ class App extends React.Component {
       case 'makeQuiz':
         pageTitle = 'Create A New Quiz!'
         break
-        default:
-        break
       case 'updateQuiz':
-      pageTitle = 'What should the quiz say now?'
+        pageTitle = 'What should the quiz say now?'
         formInputs = {
           title: postData.title,
           category: postData.category,
@@ -83,14 +106,15 @@ class App extends React.Component {
           wronganswer5b: postData.wronganswer5b,
           id: postData.id
         }
-
-
+        default:
+        break
     }
     this.setState({
       view: {
         page: view,
         pageTitle: pageTitle
-      }
+      },
+      formInputs: formInputs
     })
 }
 
