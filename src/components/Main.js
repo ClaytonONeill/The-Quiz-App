@@ -27,6 +27,10 @@ class Main extends React.Component {
     }).catch(err=>console.log(err))
   }
 
+  handleCreate = (createData) => {
+    console.log(createData);
+  }
+
   componentDidMount() {
     this.fetchPosts()
   }
@@ -45,7 +49,9 @@ class Main extends React.Component {
             postData={postData}
             handleView={this.props.handleView}
           /> ))
-          : <Form />
+          : <Form
+              handleCreate={this.handleCreate}
+            />
       }
       </main>
     )
