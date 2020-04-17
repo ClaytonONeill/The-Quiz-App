@@ -34,15 +34,17 @@ class Main extends React.Component {
   render() {
     return (
       <main>
-      <h1>{this.props.view}</h1>
-        {this.state.posts.map((postData) => {
+      <h1>{this.props.view.pageTitle}</h1>
+        {this.props.view.page === 'home' ?
+          this.state.posts.map((postData) => (
           <Post
             key={postData.id}
             postData={postData}
+            handleView={this.props.handleView}
           />
-
-        })}
-        <h2>Testing</h2>
+        ))
+        : <Form />
+      }
       </main>
     )
   }
