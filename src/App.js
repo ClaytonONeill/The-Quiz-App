@@ -82,7 +82,7 @@ class App extends React.Component {
       case 'updateQuiz':
         pageTitle = 'What should the quiz say now?'
         formInputs = {
-          title: postData.title,
+          quiztitle: postData.quiztitle,
           category: postData.category,
           question1: postData.question1,
           answer1:  postData.answer1,
@@ -106,8 +106,9 @@ class App extends React.Component {
           wronganswer5b: postData.wronganswer5b,
           id: postData.id
         }
+          break
         default:
-        break
+          break
     }
     this.setState({
       view: {

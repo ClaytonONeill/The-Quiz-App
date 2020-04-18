@@ -58,10 +58,7 @@ class Main extends React.Component {
       }
     })
       .then(updatedPost => {
-        // switch back to the home view after editing a post
-        this.props.handleView('home')
-        // for simplicity's sake, we'll just make an extra AJAX call to automatically load the post this time!
-        // if you're up for a challenge though, try and see if you can figure out how to do it without an extra call
+        this.props.handleView('viewQuizzes')
         this.fetchPosts()
       })
       .catch(err => console.log(err))

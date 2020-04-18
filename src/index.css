@@ -121,3 +121,17 @@ input[type=submit] {
   color: white;
   cursor: pointer;
 }
+
+.post-options li {
+  transition: .2s ease-in-out;
+}
+
+#post-update:hover  {
+  cursor: pointer;
+  color: lightgreen;
+}
+
+#post-delete:hover  {
+  cursor: pointer;
+  color: red;
+}

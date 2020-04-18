@@ -30,8 +30,8 @@ class Form extends React.Component {
     }
   }
 
-    handleChange = (event) => {
-      this.setState({[event.target.id] : event.target.value})
+    handleChange = (e) => {
+      this.setState({[e.target.id] : e.target.value})
     }
 
     handleSubmit = (event) => {
@@ -39,7 +39,7 @@ class Form extends React.Component {
       if (this.props.view.page === 'makeQuiz'){
         this.props.handleCreate(this.state)
       } else if (this.props.view.page === 'updateQuiz'){
-        this.props.handleUpdate(this.state)
+        this.props.handleUpdate(this.state);
       }
     }
 
