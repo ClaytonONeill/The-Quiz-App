@@ -36,12 +36,20 @@ class Form extends React.Component {
 
     handleSubmit = (event) => {
       event.preventDefault()
-      this.props.handleCreate(this.state)
+      if (this.props.view.page === 'makeQuiz'){
+        this.props.handleCreate(this.state)
+      } else if (this.props.view.page === 'updateQuiz'){
+        this.props.handleUpdate(this.state)
+      }
+
+
+      // this.props.handleUpdate(this.state)
+      // this.props.handleDelete(this.state)
     }
 
   // componentDidMount() {
   //   this.setState({
-  //     id: this.props.formInputs.id,
+  //     // id: this.props.formInputs.id,
   //     quiztitle: this.props.formInputs.quiztitle,
   //     category: this.props.formInputs.category,
   //     question1: this.props.formInputs.question1,
