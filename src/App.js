@@ -15,7 +15,7 @@ class App extends React.Component {
         pageTitle: 'About this site.'
       },
       formInputs: {
-        title: null,
+        quiztitle: null,
         category: null,
         question1: null,
         answer1: null,
@@ -45,7 +45,7 @@ class App extends React.Component {
   handleView = (view, postData) => {
     let pageTitle = '';
     let formInputs = {
-      title: '',
+      quiztitle: '',
       category: '',
       question1: '',
       answer1: '',
@@ -82,7 +82,7 @@ class App extends React.Component {
       case 'updateQuiz':
         pageTitle = 'What should the quiz say now?'
         formInputs = {
-          title: postData.title,
+          quiztitle: postData.quiztitle,
           category: postData.category,
           question1: postData.question1,
           answer1:  postData.answer1,
