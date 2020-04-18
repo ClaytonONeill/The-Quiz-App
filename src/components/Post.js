@@ -5,7 +5,7 @@ class Post extends React.Component {
     return (
         <article>
       <div className='postContain'>
-        <h2>{this.props.postData.quiztitle}</h2>
+        <h2 onClick={ () => {this.props.handleView('showQuiz', this.props.postData)}}>{this.props.postData.quiztitle}</h2>
         <h3>Category: {this.props.postData.category}</h3>
       </div>
       <div className="post-options">
