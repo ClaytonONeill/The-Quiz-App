@@ -49,7 +49,7 @@ class Main extends React.Component {
   }
 
   handleUpdate = (updateData) => {
-    fetch(`${baseUrl}/${updateData.id}`, {
+    fetch(`${baseUrl}${updateData.id}`, {
       body: JSON.stringify(updateData),
       method: 'PUT',
       headers: {
@@ -108,7 +108,7 @@ class Main extends React.Component {
           : <Form
               handleCreate={this.handleCreate}
               handleUpdate={this.handleUpdate}
-              formInputs={this.props.formInputs}
+              fromInputs={this.props.formInputs}
               view={this.props.view}
             />
       }
