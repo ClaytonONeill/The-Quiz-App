@@ -111,3 +111,13 @@ input[type=submit] {
 #question1, #question2, #question3, #question4, #question5 {
   font-size: 24px;
 }
+.post-options li {
+  list-style: none;
+  color: var(--light-green);
+  padding: 2px;
+  transition: .2s ease-in-out;
+}
+.post-options li:hover {
+  color: white;
+  cursor: pointer;
+}
