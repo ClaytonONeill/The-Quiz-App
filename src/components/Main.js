@@ -3,6 +3,7 @@ import React from 'react'
 import Form from './Form.js'
 import Post from './Post.js'
 import Home from './Home.js'
+import ShowQuiz from './shownQuiz.js'
 
 let baseUrl = '';
 if (process.env.NODE_ENV === 'development') {
@@ -25,6 +26,17 @@ class Main extends React.Component {
     .then(jData=> {
       this.setState({posts:jData})
     }).catch(err=>console.log(err))
+  }
+
+  showPost = (showData) =>  {
+    fetch(`${baseUrl}/${showData.id}`,  {
+      body: JSON.stringify(showData),
+      method: "GET",
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    }).then(this.props.handleView())
   }
 
   handleCreate = (createData) => {
@@ -91,7 +103,6 @@ class Main extends React.Component {
   render() {
     return (
       <main>
-      <h1>{this.props.view.pageTitle}</h1>
         {
           this.props.view.page === 'home' ?
           <Home />
@@ -102,12 +113,19 @@ class Main extends React.Component {
             handleView={this.props.handleView}
             handleDelete={this.handleDelete}
           /> ))
-          : <Form
-              handleCreate={this.handleCreate}
-              handleUpdate={this.handleUpdate}
-              formInputs={this.props.formInputs}
-              view={this.props.view}
+          : this.props.view.page === 'showQuiz' ?
+          <ShowQuiz
+            showPosts={this.showPost}
+            handleView={this.props.handleView}
+            quizData={this.props.quizData}
             />
+          :
+          <Form
+            handleCreate={this.handleCreate}
+            handleUpdate={this.handleUpdate}
+            formInputs={this.props.formInputs}
+            view={this.props.view}
+           />
       }
       </main>
     )
