@@ -6,11 +6,12 @@ class Post extends React.Component {
         <article>
       <div className='postContain'>
         <h2>{this.props.postData.quiztitle}</h2>
+        <h3>Category: {this.props.postData.category}</h3>
       </div>
       <div className="post-options">
           <ul>
-            <li onClick={() => {this.props.handleView('updateQuiz', this.props.postData)}}>edit quiz</li>
-            <li onClick={() => {this.props.handleDelete(this.props.postData.id)}}>delete quiz</li>
+            <li id='post-update' onClick={() => {this.props.handleView('updateQuiz', this.props.postData)}}>Edit Quiz</li>
+            <li id='post-delete' onClick={() => {this.props.handleDelete(this.props.postData.id)}}>Delete Quiz</li>
           </ul>
       </div>
       </article>

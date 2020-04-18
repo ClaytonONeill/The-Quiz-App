@@ -89,3 +89,17 @@ main {
   padding: 10px;
   margin: 3px;
 }
+
+.post-options li {
+  transition: .2s ease-in-out;
+}
+
+#post-update:hover  {
+  cursor: pointer;
+  color: lightgreen;
+}
+
+#post-delete:hover  {
+  cursor: pointer;
+  color: red;
+}
