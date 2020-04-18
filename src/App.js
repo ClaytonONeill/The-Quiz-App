@@ -106,8 +106,9 @@ class App extends React.Component {
           wronganswer5b: postData.wronganswer5b,
           id: postData.id
         }
+          break
         default:
-        break
+          break
     }
     this.setState({
       view: {
