@@ -41,17 +41,10 @@ class Form extends React.Component {
       } else if (this.props.view.page === 'updateQuiz'){
         this.props.handleUpdate(this.state);
       }
-
-
-      // this.props.handleUpdate(this.state)
-      // this.props.handleDelete(this.state)
     }
 
-
   componentDidMount() {
-    console.log(this.props.formInputs);
     this.setState({
-      id: this.props.formInputs.id,
       quiztitle: this.props.formInputs.quiztitle,
       category: this.props.formInputs.category,
       question1: this.props.formInputs.question1,
@@ -73,7 +66,12 @@ class Form extends React.Component {
       question5: this.props.formInputs.question5,
       answer5: this.props.formInputs.answer5,
       wronganswer5a: this.props.formInputs.wronganswer5a,
+<<<<<<< HEAD
       wronganswer5b: this.props.formInputs.wronganswer5b
+=======
+      wronganswer5b: this.props.formInputs.wronganswer5b,
+      id: this.props.formInputs.id
+>>>>>>> 06b055ac7fac568e2b9da93baf9527b4c3657fc2
     })
   }
 
