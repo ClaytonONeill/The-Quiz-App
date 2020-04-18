@@ -8,7 +8,7 @@ let baseUrl = '';
 if (process.env.NODE_ENV === 'development') {
   baseUrl = 'http://mighty-brook-52509.herokuapp.com/api/quizzes'
 } else {
-  console.log('this is for heroku');
+  baseUrl = 'http://mighty-brook-52509.herokuapp.com/api/quizzes'
 }
 
 class Main extends React.Component {
