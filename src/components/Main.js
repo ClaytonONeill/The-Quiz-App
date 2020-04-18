@@ -6,9 +6,9 @@ import Home from './Home.js'
 
 let baseUrl = '';
 if (process.env.NODE_ENV === 'development') {
-  baseUrl = 'http://mighty-brook-52509.herokuapp.com/api/quizzes'
+  baseUrl = 'https://mighty-brook-52509.herokuapp.com/api/quizzes'
 } else {
-  baseUrl = 'http://mighty-brook-52509.herokuapp.com/api/quizzes'
+  baseUrl = 'https://mighty-brook-52509.herokuapp.com/api/quizzes'
 }
 
 class Main extends React.Component {
