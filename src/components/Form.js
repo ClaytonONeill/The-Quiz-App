@@ -41,12 +41,9 @@ class Form extends React.Component {
       } else if (this.props.view.page === 'updateQuiz'){
         this.props.handleUpdate(this.state)
       }
-
-
-      // this.props.handleUpdate(this.state)
-      // this.props.handleDelete(this.state)
     }
 
+<<<<<<< HEAD
   // componentDidMount() {
   //   this.setState({
   //     id: this.props.formInputs.id,
@@ -74,6 +71,35 @@ class Form extends React.Component {
   //     wronganswer5b: this.props.formInputs.wronganswer5b
   //   })
   // }
+=======
+  componentDidMount() {
+    this.setState({
+      quiztitle: this.props.formInputs.quiztitle,
+      category: this.props.formInputs.category,
+      question1: this.props.formInputs.question1,
+      answer1: this.props.formInputs.answer1,
+      wronganswer1a: this.props.formInputs.wronganswer1a,
+      wronganswer1b: this.props.formInputs.wronganswer1b,
+      question2: this.props.formInputs.question2,
+      answer2: this.props.formInputs.answer2,
+      wronganswer2a: this.props.formInputs.wronganswer2a,
+      wronganswer2b: this.props.formInputs.wronganswer2b,
+      question3: this.props.formInputs.question3,
+      answer3: this.props.formInputs.answer3,
+      wronganswer3a: this.props.formInputs.wronganswer3a,
+      wronganswer3b: this.props.formInputs.wronganswer3b,
+      question4: this.props.formInputs.question4,
+      answer4: this.props.formInputs.answer4,
+      wronganswer4a: this.props.formInputs.wronganswer4a,
+      wronganswer4b: this.props.formInputs.wronganswer4b,
+      question5: this.props.formInputs.question5,
+      answer5: this.props.formInputs.answer5,
+      wronganswer5a: this.props.formInputs.wronganswer5a,
+      wronganswer5b: this.props.formInputs.wronganswer5b,
+      id: this.props.formInputs.id
+    })
+  }
+>>>>>>> 06b055ac7fac568e2b9da93baf9527b4c3657fc2
 
   render() {
     return (

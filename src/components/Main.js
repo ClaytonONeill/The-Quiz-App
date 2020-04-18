@@ -49,7 +49,7 @@ class Main extends React.Component {
   }
 
   handleUpdate = (updateData) => {
-    fetch(`${baseUrl}${updateData.id}`, {
+    fetch(`${baseUrl}/${updateData.id}`, {
       body: JSON.stringify(updateData),
       method: 'PUT',
       headers: {
