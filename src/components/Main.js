@@ -108,7 +108,7 @@ class Main extends React.Component {
           : <Form
               handleCreate={this.handleCreate}
               handleUpdate={this.handleUpdate}
-              fromInputs={this.props.formInputs}
+              formInputs={this.props.formInputs}
               view={this.props.view}
             />
       }

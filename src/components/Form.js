@@ -49,7 +49,7 @@ class Form extends React.Component {
 
   // componentDidMount() {
   //   this.setState({
-  //     // id: this.props.formInputs.id,
+  //     id: this.props.formInputs.id,
   //     quiztitle: this.props.formInputs.quiztitle,
   //     category: this.props.formInputs.category,
   //     question1: this.props.formInputs.question1,
