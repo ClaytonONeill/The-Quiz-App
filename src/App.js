@@ -69,6 +69,31 @@ class App extends React.Component {
       wronganswer5b: '',
       id: null
     }
+    let quizData = {
+      quiztitle: '',
+      category: '',
+      question1: '',
+      answer1: '',
+      wronganswer1a: '',
+      wronganswer1b: '',
+      question2: '',
+      answer2: '',
+      wronganswer2a: '',
+      wronganswer2b: '',
+      question3: '',
+      answer3: '',
+      wronganswer3a: '',
+      wronganswer3b: '',
+      question4: '',
+      answer4: '',
+      wronganswer4a: '',
+      wronganswer4b: '',
+      question5: '',
+      answer5: '',
+      wronganswer5a: '',
+      wronganswer5b: '',
+      id: null
+    }
     switch (view) {
       case 'home':
         pageTitle = 'About this site.'
@@ -78,6 +103,34 @@ class App extends React.Component {
           break
       case 'makeQuiz':
         pageTitle = 'Create A New Quiz!'
+        break
+      case 'showQuiz':
+        pageTitle = postData.quiztitle
+        quizData = {
+          quiztitle: postData.quiztitle,
+          category: postData.category,
+          question1: postData.question1,
+          answer1:  postData.answer1,
+          wronganswer1a: postData.wronganswer1a,
+          wronganswer1b: postData.wronganswer1b,
+          question2: postData.question2,
+          answer2: postData.answer2,
+          wronganswer2a: postData.wronganswer2a,
+          wronganswer2b: postData.wronganswer2b,
+          question3: postData.question3,
+          answer3: postData.answer3,
+          wronganswer3a: postData.wronganswer3a,
+          wronganswer3b: postData.wronganswer3b,
+          question4: postData.question4,
+          answer4: postData.answer4,
+          wronganswer4a: postData.wronganswer4a,
+          wronganswer4b: postData.wronganswer4b,
+          question5: postData.question5,
+          answer5: postData.answer5,
+          wronganswer5a: postData.wronganswer5a,
+          wronganswer5b: postData.wronganswer5b,
+          id: postData.id
+        }
         break
       case 'updateQuiz':
         pageTitle = 'What should the quiz say now?'
@@ -115,7 +168,8 @@ class App extends React.Component {
         page: view,
         pageTitle: pageTitle
       },
-      formInputs: formInputs
+      formInputs: formInputs,
+      quizData: quizData
     })
 }
 
@@ -129,6 +183,7 @@ class App extends React.Component {
         view={this.state.view}
         handleView={this.handleView}
         formInputs={this.state.formInputs}
+        quizData={this.state.quizData}
       />
       </div>
       </div>
