@@ -269,7 +269,6 @@ input[type=submit]:hover {
   border-radius: 5px;
 }
 
-
 .showQuizContain  h4  {
   font-size: 1.2em;
   padding: 1em;
@@ -282,11 +281,30 @@ input[type=submit]:hover {
   box-shadow: -2px 2px 4px black;
 }
 
+#rightAnswer {
+  font-size: 1.2em;
+  padding: 1em;
+  width: 20em;
+  color: black;
+  background: lightgreen;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: -2px 2px 4px black;
+}
+
+#wrongAnswer {
+  font-size: 1.2em;
+  padding: 1em;
+  width: 20em;
+  color: black;
+  background: red;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: -2px 2px 4px black;
+}
+
+
 .showQuizContain  h4:hover  {
   background: lightblue;
   cursor: pointer;
-}
-
-.rightAnswer:active  {
-  background: lightgreen;
 }
