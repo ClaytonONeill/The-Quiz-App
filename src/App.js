@@ -176,7 +176,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="outter-container">
-        <Header />
+        <Header view={this.state.view} />
       <div className="inner-container">
       <Nav handleView={this.handleView}/>
       <Main

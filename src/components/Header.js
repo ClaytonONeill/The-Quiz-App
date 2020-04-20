@@ -4,7 +4,11 @@ class Header extends React.Component {
   render() {
     return(
       <header>
-        <h1>Insert header here</h1>
+        <div>
+        {this.props.view.page === "home" ? <h1>THE QUIZ APP!</h1> : <h1 style={{color: '#5ABF86'}}>THE QUIZ APP!</h1> }
+        </div>
+        <div className="navBottom">
+        </div>
       </header>
     )
   }
