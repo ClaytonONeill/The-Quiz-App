@@ -24,6 +24,8 @@ header {
   border-top: solid 4px var(--dark-green);
   border-left: solid 4px var(--dark-green);
   border-right: solid 4px var(--dark-green);
+  text-align: center;
+  font-size: 1.70em;
 }
 .outter-container {
   padding: 4% 6% 0 6%;
@@ -82,7 +84,7 @@ main h1 {
   display: flex;
   flex-direction: column;
   border-radius: 2px;
-  background-color: var(--light-green);
+  background-color: var(--navy);
 }
 .formTitle {
   font-size: 2em;
@@ -147,6 +149,7 @@ input[type=submit] {
   flex-direction: row;
   background-color: black;
   padding: 1em;
+  border-radius: 4px;
 }
 
 
