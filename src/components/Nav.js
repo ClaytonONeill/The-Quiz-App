@@ -8,7 +8,6 @@ class Nav extends React.Component {
           <li onClick={() => {this.props.handleView('home')}}>Home</li>
           <li onClick={() => {this.props.handleView('viewQuizzes')}}>Browse Quizzes</li>
           <li onClick={() => {this.props.handleView('makeQuiz')}}>Create Quiz</li>
-        
         </ul>
       </nav>
     )
