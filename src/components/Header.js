@@ -4,7 +4,11 @@ class Header extends React.Component {
   render() {
     return(
       <header>
-        <h1>Insert header here</h1>
+        <div>
+          <h1>THE QUIZ APP!</h1>
+        </div>
+        <div className="navBottom">
+        </div>
       </header>
     )
   }
