@@ -13,7 +13,7 @@ class Home extends Component {
             <h2>CREATED BY :</h2>
             <ul>
               <a href="https://github.com/MadMax1776"><li>Max Meacham</li></a>
-              <a href="https://github.com/Zilllla"><li>Courteny Zavaleta</li></a>
+              <a href="https://github.com/Zilllla"><li>Courtney Zavaleta</li></a>
               <a href="https://github.com/ClaytonONeill"><li>Clayton O'Neill</li></a>
             </ul>
           </div>
