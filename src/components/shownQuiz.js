@@ -62,9 +62,6 @@ class ShowQuiz extends Component  {
       return (
         <React.Fragment>
           <div className="showQuizContain">
-            <div className="showQuizNav">
-              <h1>{this.state.quiztitle}</h1>
-            </div>
               <h2>Question 1</h2>
                 <h3>{this.state.question1}</h3>
                   <h4 className="wrongAnswer">{this.state.wronganswer1a}</h4>

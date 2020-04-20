@@ -25,31 +25,49 @@ header {
   border-top: solid 4px var(--dark-green);
   border-left: solid 4px var(--dark-green);
   border-right: solid 4px var(--dark-green);
+  text-align: center;
+  font-size: 1.70em;
 }
 
 header h1   {
-  font-size: 4em;
+  font-size: 3em;
+  margin: .3em auto;
+}
+
+.navBottom  {
+  background: black;
+  height: 2em;
+  width: 100%;
 }
 
 .outter-container {
   padding: 4% 6% 0 6%;
 }
+
 .inner-container {
   display: flex;
   min-height: 600px;
 }
+
 nav {
-  width: 200px;
+  width: 20em;
   font-family: var(--head-font);
   background-color: var(--navy);
   border-left: solid 4px var(--dark-green);
 }
+
+nav ul {
+  padding: 0;
+  line-height: 5em;
+}
+
 nav li {
   list-style: none;
   color: var(--light-green);
   padding: 2px;
   text-align: center;
   transition: .2s ease-in-out;
+  font-size: 1.3em;
 }
 
 nav li:hover  {
@@ -64,23 +82,80 @@ main {
   width: 100%;
   border-right: solid 4px var(--dark-green);
   padding: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 main h1 {
   padding-left: 4%;
 }
 
+/* ===== HOME ====== */
+
+.homePContain h2  {
+  font-size: 2.3em;
+}
+
+.homePContain p {
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 2em;
+}
+
+.homePContain li {
+  list-style: square;
+  line-height: 3em;
+  text-decoration: underline;
+  font-size: 1.6em;
+  transition: .3s ease-in-out;
+  width: 10em;
+}
+
+.homePContain li:hover {
+  color: lightblue;
+  cursor: pointer;
+}
+
+.homePContain a {
+  color: white;
+  width: 10em;
+}
+
 /* ===== POSTS ====== */
 
+
+
+.postContain  {
+  border: 3px solid rgba(255,255,255, .3);
+  background: var(--dark-dark-purple);
+  width: 35em;
+  padding: 1em;
+  border-radius: 5px;
+  margin: 2em 0;
+  text-align: center;
+  box-shadow: -2px 2px 5px black;
+}
+
 .postContain h2 {
-  text-decoration: underline;
   transition: .2s ease-in-out;
+  font-size: 3em;
+}
+
+.postContain h3 {
+  font-size: 2em;
 }
 
 .postContain h2:hover {
   color: var(--dark-green);
   cursor: pointer;
 }
+
+form {
+  width: 100%;
+}
+
 .forms {
   border: solid 2px var(--light-green);
   margin: 3% 6% 0 3%;
@@ -88,11 +163,13 @@ main h1 {
   display: flex;
   flex-direction: column;
   border-radius: 2px;
-  background-color: var(--light-green);
+  background-color: var(--navy);
 }
+
 .formTitle {
   font-size: 2em;
 }
+
 .q1, .q2, .q3, .q4, .q5 {
   border: solid 2px var(--light-green);
   border-radius: 2px;
@@ -103,25 +180,48 @@ main h1 {
   flex-wrap: wrap;
   background-color: var(--purple);
 }
+
 input[type=text] {
   background-color: var(--grey);
   box-sizing: border-box;
   border-radius: 2px;
   border: none;
 }
+
 input[type=submit] {
   border: none;
+  border-radius: 5px;
   width: 10%;
   height: 40%;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  transition: .3s ease-in-out;
 }
+
+input[type=submit]:hover {
+  background: lightgreen;
+  cursor: pointer;
+}
+
 #question1, #question2, #question3, #question4, #question5 {
   font-size: 24px;
 }
-.post-options li {
+
+.post-options {
+  width: 35em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.post-options h3 {
   list-style: none;
   color: var(--light-green);
   padding: 2px;
   transition: .2s ease-in-out;
+  font-size: 2em;
+  line-height: 1.4em;
+  width: auto;
 }
 .post-options li:hover {
   color: white;
@@ -134,7 +234,7 @@ input[type=submit] {
 
 #post-update:hover  {
   cursor: pointer;
-  color: lightgreen;
+  color: gold;
 }
 
 #post-delete:hover  {
@@ -142,29 +242,22 @@ input[type=submit] {
   color: red;
 }
 
-/* ==== SHOW QUIZ CSS */
+/* ==== SHOW QUIZ CSS ====*/
 
 .showQuizContain  {
   text-align: center;
 }
 
 .showQuizNav  {
-  display: flex;
-  flex-direction: row;
-  background-color: black;
-  padding: 1em;
-}
-
-
-
-.showQuizNav  h1  {
-  padding: 0;
+  background-color: var(--dark-dark-purple);
+  padding: 2em;
+  border-radius: 4px;
+  width: 100%;
   margin: 0 auto;
-  font-size: 3em;
 }
 
 .showQuizContain  h2  {
-  font-size: 1.5em;
+  font-size: 2.5em;
   color: white;
   margin-top: 2em;
   border-radius: 5px;
